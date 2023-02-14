@@ -47,7 +47,7 @@ self.addEventListener('install', ev => {
 })
 
 self.addEventListener('activate', ev => {
-    ev.waitUntil(self.Clients.claim())
+    ev.waitUntil(self.clients.claim())
     ev.waitUntil(self.registration.navigationPreload.enable())
 })
 
