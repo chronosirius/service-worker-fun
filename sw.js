@@ -17,7 +17,7 @@ async function stepFetch_fastest({ request, preload, fallback_cached }) {
     try {
         network_res = await fetch(request)
         cache = await self.caches.open('main_cache')
-        cache.addAll(network_res.clone())
+        cache.put(request, network_res.clone())
         return network_res;
     } catch (err) {
         fallback = await self.caches.match(fallback_cached)
