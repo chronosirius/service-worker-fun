@@ -35,7 +35,7 @@ async function stepFetch_fastest({ request, preload, fallback_cached }) {
 self.addEventListener('install', ev => {
     ev.waitUntil(self.caches.open('main_cache').then(cache => {
         cache.addAll([
-            '/',
+            '/service-worker-fun/',
             'index.html',
             'page1.html',
             'page2.html',
