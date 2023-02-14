@@ -36,7 +36,7 @@ self.addEventListener('install', ev => {
     ev.waitUntil(self.caches.open('main_cache').then(cache => {
         cache.addAll([
             '/',
-            '/index.html',
+            'index.html',
             'page1.html',
             'page2.html',
             'e.jpg',
